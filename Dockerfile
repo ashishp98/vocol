@@ -24,7 +24,7 @@ RUN  apt-get update -yq \
 # Build application
 RUN mkdir /home/project
 WORKDIR /home/project
-RUN git clone  https://github.com/vocol/vocol.git \
+RUN git clone  https://github.com/ashishp98/vocol.git \
 &&  chmod u+x  .
 WORKDIR /home/project/vocol
 RUN npm install
