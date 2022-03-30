@@ -19,7 +19,13 @@ contents = contents.replace(/portNumber=[0-9]+/mg, "portNumber="+sparqlEndpointP
 fs.writeFileSync(filePath, contents);
 
 var server = app.listen(webPort, function() {
-  console.log('VoCol server is running on port ' + server.address().port + '\nJena Fuseki server is running on port ' + sparqlEndpointPort);
+  console.log('VoCol server is running on port ' + server.address().port);
 });
-server.timeout = 1000 * 60 * 10; // 10 minutes
+
+var server = app.listen(webPort, function() {
+  console.log('Jena Fuseki server is running on port ' + sparqlEndpointPort);
+});
+
+
+// server.timeout = 1000 * 60 * 10; // 10 minutes
 
